@@ -48,9 +48,9 @@ const add = (add: number) => {
 
 
 export const counterModule = {
-    initial,
-    reducer,
-    action: {
-      add
-    }
+  initial,
+  reducer,
+  action: {
+    add
+  }
 }
