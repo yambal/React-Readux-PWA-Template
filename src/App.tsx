@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { CopyRight } from './containers/Copyright';
+import { Counter } from './containers/Counter';
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,8 @@ function App() {
         >
           Learn React
         </a>
+        <CopyRight />
+        <Counter />
       </header>
     </div>
   );
