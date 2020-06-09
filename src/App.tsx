@@ -1,8 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-import { CopyRight } from './containers/Copyright'
 
 import { Home } from './containers/Home';
 import { Counter } from './containers/Counter';
