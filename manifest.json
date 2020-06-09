@@ -21,7 +21,7 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
-  "start_url": "https://yambal.github.io/React-Readux-PWA-Template/",
+  "start_url": "./index.html",
   "url": "https://yambal.github.io/React-Readux-PWA-Template/",
   "screenshots": [],
   "orientation": "portrait",
