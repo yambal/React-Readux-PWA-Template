@@ -23,3 +23,6 @@
   "lang":"ja"
 }
 ```
+
++ Redux (Redux Thunk)
++ React Router Dom
