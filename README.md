@@ -14,3 +14,12 @@
 ```
 
 ```yarn run ghpages```
+
+``` src/manifest.js
+  "start_url": ".",
+  "url": ".",
+  "screenshots": [],
+  "orientation": "portrait",
+  "lang":"ja"
+}
+```
