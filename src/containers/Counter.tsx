@@ -11,6 +11,7 @@ export const Counter:React.FC = () => {
 
   const addHandler = React.useCallback(
     (event: React.MouseEvent<HTMLButtonElement>) => {
+      event.preventDefault()
       dispatch(counterModule.action.add(1))
     },
     []
