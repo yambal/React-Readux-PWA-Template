@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
+import { CopyRight } from './Copyright'
 
 interface iHome extends RouteComponentProps<{}> {}
 
@@ -17,6 +18,7 @@ const _Home:React.FC<iHome> = props => {
     <React.Fragment>
       <h1>home</h1>
       <a href="#" onClick={jampToCounter}>Counter</a>
+      <CopyRight />
     </React.Fragment>
   )
 }

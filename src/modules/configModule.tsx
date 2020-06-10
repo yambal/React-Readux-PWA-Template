@@ -1,6 +1,8 @@
 const dotenv = require('dotenv')
 dotenv.config({ debug: true })
 
+console.log(4, process.env.NODE_ENV)
+
 export interface iConfigState {
     nodeEnv?: string
     copy_right?: string
