@@ -1,25 +1,24 @@
 import React from 'react'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
-import { CopyRight } from './Copyright'
+import { Container, Typography, Button } from '@material-ui/core'
 
 interface iHome extends RouteComponentProps<{}> {}
 
 const _Home:React.FC<iHome> = props => {
-  const { history } = props
+  // const { history } = props
 
   const jampToCounter = React.useCallback(
-    (event: React.MouseEvent<HTMLAnchorElement>) => {
-      history.push('/counter')
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+      props.history.push('/counter')
     },
-    []
+    [props.history]
   )
 
   return (
-    <React.Fragment>
-      <h1>home</h1>
-      <a href="#" onClick={jampToCounter}>Counter</a>
-      <CopyRight />
-    </React.Fragment>
+    <Container>
+      <Typography variant="h1" component="h2">Home</Typography>
+      <Button onClick={jampToCounter} variant="contained" color="primary">Counter</Button>
+    </Container>
   )
 }
 

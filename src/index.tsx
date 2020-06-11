@@ -6,13 +6,13 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import store from './redux/store'
 
-import { BrowserRouter } from 'react-router-dom'
+import { MyThemeProvider } from './provider/MyThemeProvider';
 
 ReactDOM.render(
   <Provider store={store}>
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
+    <MyThemeProvider fontType="ja" baseFontSize={16}>
+      <App />
+    </MyThemeProvider>
   </Provider>,
   document.getElementById('root')
 );
