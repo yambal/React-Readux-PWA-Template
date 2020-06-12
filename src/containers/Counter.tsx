@@ -2,6 +2,7 @@ import React from 'react'
 import iRootState from '../redux/rootState'
 import { useSelector, useDispatch } from 'react-redux'
 import { counterModule } from '../modules/counterModule'
+import { Container } from '@material-ui/core'
 
 const count = (state: iRootState): number => state.counter.count
 
@@ -14,12 +15,12 @@ export const Counter:React.FC = () => {
       event.preventDefault()
       dispatch(counterModule.action.add(1))
     },
-    []
+    [dispatch]
   )
 
   return (
-    <div>
+    <Container>
       {stateCount}:<button type="button" onClick={addHandler}>add</button>
-    </div>
+    </Container>
   )
 }
