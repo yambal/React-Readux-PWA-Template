@@ -16,8 +16,13 @@ import { GrowSpacer } from './components/GrowSpacer';
 import { List, ListItem, ListItemIcon, ListItemText, Divider } from '@material-ui/core';
 import { SwipeableTemporaryDrawer } from './containers/SwipeableTemporaryDrawer';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
+import iRootState from './redux/rootState';
+import { useSelector } from 'react-redux';
+
+const routerBasename = (state: iRootState): string | undefined => state.config.router_basename
 
 const App:React.FC = () => {
+  const stateRouterBasename = useSelector(routerBasename) || '/'
   const drawerRef = React.useRef<any>()
 
   const drawerOpenHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -25,7 +30,7 @@ const App:React.FC = () => {
   }
 
   return (
-    <BrowserRouter basename="/React-Readux-PWA-Template">
+    <BrowserRouter basename={stateRouterBasename}>
       <SwipeableTemporaryDrawer ref={drawerRef} position="left">
         <List>
           <ListItem button>
